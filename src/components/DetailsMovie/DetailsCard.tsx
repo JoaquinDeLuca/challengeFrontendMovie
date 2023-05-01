@@ -31,7 +31,7 @@ export default function DetailsCard({data}:Props) {
         }
         {/* logica para poder añadir un comentario  */}
         <Box>
-          { <Button  onClick={() => setShowInputs(!Showinputs)} sx={{marginTop: 4}}>Add Comment</Button>}
+          { <Button variant="outlined" onClick={() => setShowInputs(!Showinputs)} sx={{marginTop: 4}}>Add Comment</Button>}
         </Box>
         <Box sx={{display: 'flex',flexDirection: 'column' , width: '360px',}}>
           {Showinputs && <Comments id={id} key={id} />}
