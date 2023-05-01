@@ -16,15 +16,14 @@ export default function favorites() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
-            margin: 3,
-            height: "20vh",
+            margin: 4,
+            minHeight: "77vh",
           }}
         >
           <Typography variant="h5">You don't have favorites</Typography>
         </Box>
       ) : (
-        <Box component={"div"} sx={{ margin: 3 }}>
+        <Box component={"div"} sx={{ margin: 3, minHeight: '78vh' }}>
           <Typography variant="h5" sx={{ textAlign: "center", margin: 2 }}>
             Your favorite movies
           </Typography>
