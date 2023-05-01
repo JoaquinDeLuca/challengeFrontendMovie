@@ -25,13 +25,13 @@ export default function Search() {
   const showMessage = !isLoading && (!showResults || dataInput === '');
 
   return (
-    <>
+    <Box sx={{ minHeight: '69vh'}}>
       <Box
         component={"form"}
         //Acá lo puse así para no hacer una simple fun que tenga solamente el preventDefault 
         // y no se recargue la pag si el usuario aprieta enter
         onSubmit={(e) => e.preventDefault()}
-        sx={{ display: "flex", justifyContent: "center", gap: 2, margin: 5 }}
+        sx={{ display: "flex",justifyContent:'center', margin: 6 }}
       >
         <TextField
           id="outlined-basic"
@@ -63,6 +63,6 @@ export default function Search() {
         </>
         }
       </Box>
-    </>
+    </Box>
   );
 }
