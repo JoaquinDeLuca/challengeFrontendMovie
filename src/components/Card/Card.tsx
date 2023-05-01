@@ -33,7 +33,7 @@ export default function ActionAreaCard({ data }: Props) {
     // puedo cambiar el valor del botón, según el includes.
     let isFavorites = moviesFavorites.Result.includes(movie);
     return (
-      <Card sx={{ maxWidth: 345 }} key={id}>
+      <Card sx={{ maxWidth: 450 }} key={id}>
         <CardMedia
           component="img"
           alt={title}
@@ -48,7 +48,7 @@ export default function ActionAreaCard({ data }: Props) {
             {overview.substring(0, 120)}...
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{justifyContent: 'center'}}>
           <Button onClick={() => handleClick(movie)}>
             {isFavorites ? "Remove from favorites" : "Add to favorites"}
           </Button>
