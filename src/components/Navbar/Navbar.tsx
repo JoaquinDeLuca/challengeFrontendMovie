@@ -7,11 +7,11 @@ export default function ElevateAppBar() {
   return (
     <>
         <AppBar position='sticky' sx={{height:'8vh', justifyContent: 'center'}}>
-          <nav>
+          <nav className='nav'>
+            <Typography variant='h5'>
+              <Link href={'/'} className='title'>Movies</Link>
+            </Typography>
             <Toolbar>
-              <Typography variant='h4' sx={{flexGrow: 1}}>
-                <Link href={'/'} className='title'>Challenge</Link>
-              </Typography>
               <Link href={'/favorites'} className='Link'>Favorites</Link>
               <Link href={'/search'} className='Link'>Search a movie</Link>
             </Toolbar>
