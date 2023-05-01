@@ -29,18 +29,17 @@ export default function Comments({id}:Props) {
   }
 
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}
+    <Box sx={{display: 'flex', flexDirection: 'column'}}
         component={'form'}
         onSubmit={handleSubmit}
     >
         <Typography variant='h6' marginTop={4}>Comments</Typography>
-        <TextField id="standard-basic" label="first name" variant="standard" name='nameUser' onChange={handleChange} required/>
+        <TextField  id="standard-basic" label="first name" variant="standard" name='nameUser' onChange={handleChange} required/>
         <TextField
           id="standard-multiline-static"
           label="comment"
           multiline
-          rows={4}
-        //   defaultValue="Default Value"
+          rows={3}
           variant="standard"
           onChange={handleChange}
           name='comments'
