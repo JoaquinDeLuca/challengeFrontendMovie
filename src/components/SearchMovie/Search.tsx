@@ -25,7 +25,7 @@ export default function Search() {
   const showMessage = !isLoading && (!showResults || dataInput === '');
 
   return (
-    <Box sx={{ minHeight: '69vh'}}>
+    <Box sx={{ minHeight: '75vh'}}>
       <Box
         component={"form"}
         //Acá lo puse así para no hacer una simple fun que tenga solamente el preventDefault 
@@ -46,7 +46,7 @@ export default function Search() {
       </Box>
       <Box component={"div"}>
         {isLoading && <Typography variant="h6" textAlign={"center"}>Loading...</Typography>}  
-        {showMessage && <Typography textAlign={'center'}> {dataInput === '' ? 'Search for the movie you want' : 'No results found'}</Typography>}
+        {showMessage && <Typography textAlign={'center'} fontSize={20}> {dataInput === '' ? 'Search for the movie you want' : 'No results found'}</Typography>}
         {showResults &&
         <>
             <Box
