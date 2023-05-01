@@ -15,7 +15,7 @@ export default function Footer() {
         <Container
           sx={{ display: "flex", justifyContent: "center", padding: 2 }}
         >
-          <Typography color={"white"}>Challenge | 2023</Typography>
+          <Typography color={"white"} fontWeight={'500'} fontSize={18}>Challenge | 2023</Typography>
         </Container>
       </Box>
     </>
