@@ -12,9 +12,10 @@ export default function DetailsCard({data}:Props) {
   const { title, poster_path, overview, vote_average, id, release_date, original_language, comment, nameUser } = data;
 
   return (
-    <Container sx={{ display: "flex", gap: 3 }} key={id}>
-      <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
-      <Box component={'div'}>
+    <>
+    <div className="containerDetails">
+      <img className="imgDetails" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
+      <div className="info">
         <Typography variant="h3">{title}</Typography>
         <Typography>{overview}</Typography>
         <Typography><Typography component={'span'} fontWeight={'500'}>Votes:</Typography> {vote_average}</Typography>
@@ -23,15 +24,21 @@ export default function DetailsCard({data}:Props) {
         {/* Si exite cada una de esas propiedades voy a mostrar el comentario */}
         {comment && nameUser && 
         <>
-          <Typography variant="h5" marginTop={2}>Movie Comments</Typography>
+          <Typography variant="h5" marginTop={2}>Comments</Typography>
           <Typography fontWeight={'600'}>{nameUser}</Typography>
           <Typography>{comment}</Typography>
         </>
         }
         {/* logica para poder añadir un comentario  */}
-        { <Button onClick={() => setShowInputs(!Showinputs)}>Add Comment</Button>}
-        {Showinputs && <Comments id={id} key={id} />}
-      </Box>
-    </Container>
+        <Box>
+          { <Button  onClick={() => setShowInputs(!Showinputs)} sx={{marginTop: 4}}>Add Comment</Button>}
+        </Box>
+        <Box sx={{display: 'flex',flexDirection: 'column' , width: '360px',}}>
+          {Showinputs && <Comments id={id} key={id} />}
+        </Box>
+      </div>
+    </div>
+        
+    </>
   );
 }
