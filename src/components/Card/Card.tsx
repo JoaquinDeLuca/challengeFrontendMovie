@@ -48,12 +48,12 @@ export default function ActionAreaCard({ data }: Props) {
             {overview.substring(0, 120)}...
           </Typography>
         </CardContent>
-        <CardActions sx={{justifyContent: 'center'}}>
-          <Button onClick={() => handleClick(movie)}>
+        <CardActions sx={{justifyContent: 'center', gap: 2}}>
+          <Button onClick={() => handleClick(movie)} variant="outlined">
             {isFavorites ? "Remove from favorites" : "Add to favorites"}
           </Button>
           <Link href={`movieDetails/${id}`} onClick={() => handleLink(movie)}>
-            <Button>See more</Button>
+            <Button variant="contained">See more</Button>
           </Link>
         </CardActions>
       </Card>
