@@ -45,7 +45,7 @@ export default function Comments({id}:Props) {
           name='comments'
           required
         />
-        <Button type='submit'>Send</Button>
+        <Button variant="contained" type='submit' sx={{marginTop:2}}>Send</Button>
     </Box>
   )
 }

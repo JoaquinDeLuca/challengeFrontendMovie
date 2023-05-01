@@ -39,6 +39,7 @@ export default function Search() {
           variant="outlined"
           type="search"
           name="search"
+          focused 
           required
           onChange={handleChange}
         />
