@@ -68,6 +68,8 @@ export default function ActionAreaCard({ data }: Props) {
         flexWrap: "wrap",
         gap: 3,
         justifyContent: "center",
+        paddingLeft: 0,
+        paddingRight: 0
       }}
     >
       {data?.map(printCard)}
