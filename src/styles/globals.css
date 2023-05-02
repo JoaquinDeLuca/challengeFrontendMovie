@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 .title{
   color: #fcfcfc;
@@ -17,8 +16,12 @@
 .Link {
   color: #fcfcfc;
   text-decoration: none;
-  margin: 0 6px;
+  margin: 4px;
   font-size: 18px;
+  transition: .3s all ease;
+}
+.Link:hover{  
+  color: #282426;
 }
 
 .containerDetails{
