@@ -13,7 +13,7 @@ export default function ElevateAppBar() {
             </Typography>
             <Toolbar>
               <Link href={'/favorites'} className='Link'>Favorites</Link>
-              <Link href={'/search'} className='Link'>Search a movie</Link>
+              <Link href={'/search'} className='Link'>Search movie</Link>
             </Toolbar>
           </nav>
         </AppBar>

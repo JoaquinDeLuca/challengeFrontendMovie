@@ -52,7 +52,7 @@ export default function ActionAreaCard({ data }: Props) {
           <Button onClick={() => handleClick(movie)} variant="outlined">
             {isFavorites ? "Remove from favorites" : "Add to favorites"}
           </Button>
-          <Link href={`movieDetails/${id}`} onClick={() => handleLink(movie)}>
+          <Link className="Link" href={`movieDetails/${id}`} onClick={() => handleLink(movie)}>
             <Button variant="contained">See more</Button>
           </Link>
         </CardActions>
