@@ -1,4 +1,4 @@
-import { Box, TextField, Typography } from "@mui/material";
+import { Box, Container, TextField, Typography } from "@mui/material";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import Card from "src/components/Card/Card";
 import { useGetMovieSearchQuery } from "src/redux/services/movieApi";
@@ -11,7 +11,6 @@ export default function Search() {
   // Funcion que captura los datos del input y los setea en state
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setDataInput(e.target.value);
-    console.log(dataInput);
   };
 
   // acá guardo en el local storoge el valor del input
@@ -60,7 +59,17 @@ export default function Search() {
             >
             <Typography variant="h6">{dataInput && `You searched: ${dataInput}` }</Typography>
           </Box>
-          <Card data={data?.results} />
+          <Container
+            maxWidth="lg"
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 3,
+              justifyContent: "center"
+            }}
+          >
+            <Card data={data?.results} />
+          </Container>
         </>
         }
       </Box>
